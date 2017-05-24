@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<!-- Add a page in the notebook for show courses --> 
+		<record model="ir.ui.view" id="partner_courses_form_view">
+			<field name="name">partner.courses.form.view</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form"/>
+			<field name="arch" type="xml">
+				<notebook position="inside">
+					<button string="Refresh" name="course_ids_refresh" type="object" class="oe_highlight"/>
+					<page string="Curriculum">
+						<!-- esto me saca la vista de arbol por defento del modelo 'openacademy.course'
+						     para modificar hacer un tree -->
+						<field name="course_ids"/>
+					</page>	
+				</notebook>	
+			</field>
+		</record>		
+	</data>			
+</openerp>	
