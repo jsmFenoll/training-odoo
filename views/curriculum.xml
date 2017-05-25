@@ -8,8 +8,10 @@
 			<field name="inherit_id" ref="base.view_partner_form"/>
 			<field name="arch" type="xml">
 				<notebook position="inside">
-					<button string="Refresh" name="course_ids_refresh" type="object" class="oe_highlight"/>
 					<page string="Curriculum">
+						<group>
+							<button string="Refresh" name="course_ids_refresh" type="object" class="oe_highlight"/>
+						</group>
 						<!-- esto me saca la vista de arbol por defento del modelo 'openacademy.course'
 						     para modificar hacer un tree -->
 						<field name="course_ids"/>
@@ -19,3 +21,4 @@
 		</record>		
 	</data>			
 </openerp>	
+
